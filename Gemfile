@@ -2,8 +2,11 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.1"
-#追加：パスワード生成用のジェム
+# 追加：パスワード生成用のジェム
 gem "bcrypt"
+
+# 追加：ENV用のジェム
+gem "dotenv-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.6"
