@@ -1,11 +1,24 @@
-<h1>Login</h1>
+<div class = "container">
+  <div class = "heading">
+    <h1>Login</h1>
+  </div>
 
-<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+    <table class = "form_login">
+      
+      <tr>
+        <td><%= f.label :email %></td>
+        <td><%= f.email_field :email %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :password %></td>
+        <td><%= f.password_field :password %></td>
+      </tr>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+    </table>
 
-  <%= f.submit "Login" %>
-<% end %>
+    <div class = "form_login_submit">
+      <%= f.submit "Login" %>
+    </div>
+  <% end %>
+</div>

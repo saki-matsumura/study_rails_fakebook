@@ -12,14 +12,12 @@ header{
   text-decoration: none;
 }
 
+/* ———————————————————————————————————————— */
+/* 投稿一覧 */
+/* - - - - - - - - - - - - - - - - - - - -  */
 
 #post_menu {
   list-style: none;
-}
-
-.notice{
-  margin: 0% 10% 20px;
-  padding: 25px;
 }
 
 .new_post{
@@ -37,7 +35,6 @@ header{
 
 .post_head{
   width: 100%;
-  /* display: flex; */ 
 }
 
 .user_name{
@@ -48,12 +45,10 @@ header{
 #post_menu {
   list-style: none;
   float: right;
-  /* text-align: right; */
 }
 
 #post_menu ul{
   align-items: center; 
-  /* text-align: right; */
 }
 
 #post_menu li:last-child{
@@ -70,12 +65,10 @@ header{
   text-decoration: none;
 }
 
-/* コンテンツ */
 .content_text {
   width: 100%;
   float: left;
   margin-bottom: 20px;
-  /* margin: 0px; */
 }
 
 .content_image img {
@@ -87,7 +80,7 @@ header{
 /* new, show, editのコンテンツ部分 */
 /* - - - - - - - - - - - - - - - - - - - -  */
 
-.criate_contents{
+.heading{
   margin: 20px 0% ;
 }
 
@@ -100,3 +93,13 @@ header{
 }
 
 /* ———————————————————————————————————————— */
+/* ログインフォーム */
+/* - - - - - - - - - - - - - - - - - - - -  */
+
+.form_login td {
+  padding: 0px 20px 10px 0px;
+}
+
+.form_login_submit{
+  padding: 0px 20px 0px 0px;
+}
