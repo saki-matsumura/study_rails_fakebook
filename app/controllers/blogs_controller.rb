@@ -14,7 +14,6 @@ class BlogsController < ApplicationController
   end
 
   def show
-    # @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
   
   def create
@@ -23,10 +22,8 @@ class BlogsController < ApplicationController
       render :new
     else
       if @blog.save
-        # 一覧画面へ遷移して、"ブログを作成しました！"とメッセージを表示する
         redirect_to blogs_path, notice: "ブログを作成しました！"   
       else
-        # 入力フォームを再描画します。
         render :new
       end
     end
@@ -35,7 +32,6 @@ class BlogsController < ApplicationController
   def confirm
     @blog = current_user.blogs.build(blog_params)
     render :new if @blog.invalid?
-    # binding.pryblog
   end
   
   def edit
