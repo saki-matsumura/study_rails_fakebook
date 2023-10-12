@@ -1,15 +1,99 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+header{
+  background-color: #3E68AF;
+
+}
+
+.app_name a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.btn a{
+  text-decoration: none;
+}
+
+
+#post_menu {
+  list-style: none;
+}
+
+.notice{
+  margin: 0% 10% 20px;
+  padding: 25px;
+}
+
+.new_post{
+  margin: 20px 10% ;
+}
+
+.contents_field{
+  border: 2px solid;
+  border-color: #cccccc;
+  border-radius: 10px;
+  margin: 0% 10% 20px;
+  padding: 25px;
+  
+}
+
+.post_head{
+  width: 100%;
+  display: flex;
+  text-align: right;
+}
+
+.post_nav{
+  
+}
+
+#post_menu {
+  list-style: none;
+}
+
+#post_menu ul{
+  align-items: center; 
+  text-align: right;
+}
+
+#post_menu li:last-child{
+  border-right: #ddd 1px solid;
+}
+ 
+#post_menu li {
+  display: inline;
+  padding: 0 10px;
+  border-left: #ddd 1px solid;
+}
+ 
+#post_menu li a {
+  text-decoration: none;
+}
+
+/* コンテンツ */
+.content_text {
+  width: 100%;
+  text-align: left;
+  margin: 10px 0px;
+}
+
+.content_image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ———————————————————————————————————————— */
+/* new, show, editのコンテンツ部分 */
+/* - - - - - - - - - - - - - - - - - - - -  */
+
+.criate_contents{
+  margin: 20px 0% ;
+}
+
+.btn_back{
+  margin-top: 20px;
+}
+
+.btn_back a{
+  color: #FFFFFF;
+}
+
+/* ———————————————————————————————————————— */

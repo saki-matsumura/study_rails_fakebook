@@ -1,6 +1,22 @@
-<h1>ブログ詳細</h1>
-<p>内容： <%= @blog.content %></p>
-<% if @blog.image && @blog.image.url%>
-  <p>画像： <%= image_tag @blog.image.url %></p>
-<% end %>
-<a href="/blogs">一覧画面に戻る</a>
+<div class = "container">
+
+  <div class = "criate_contents">
+    <h2>詳細</h2>
+  </div>
+
+  <div class = "content_text">
+    <%= @blog.content %>
+  </div>
+
+  <% if @blog.image && @blog.image.url%>
+    <div class = "content_image">
+      <%= image_tag @blog.image.url %>
+    </div>
+  <% end %>
+
+  <div class = "btn_back btn btn-info">
+    <a href="/blogs">一覧に戻る</a>
+  </div>
+
+  
+</div>

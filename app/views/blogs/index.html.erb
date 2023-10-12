@@ -1,27 +1,47 @@
-<h1>ブログ一覧</h1>
 
-<p><%= notice %></p>
+<div class = "container">
+  <% if notice %>
+  <div class = "notice">
+    <p><%= notice %></p>
+  </div>
+  <% end %>
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>投稿者</th>
-    <th>内容</th>
-  </tr>
+  <div class = "new_post">
+    <%= link_to '新しく投稿する', new_blog_path, class: "btn btn-info" %>
+  </div>
 
-<% @blogs.each do |blog| %>
+    <% @blogs.each do |blog| %>
+    <div class = "contents_field">
+        <%# 投稿の箱 %>
+  
+        <%# ユーザー名とメニューの箱 %>
+        <div class = "post_head">
+          <div class = "user_name">
+            <%= blog.user.name %>
+          </div>
+          <div class = "post_nav">
+            <ul id = "post_menu">
+              <li><%= link_to '詳細', blog_path(blog.id) %></li>
+              <% if blog.user == current_user %>
+                <li><%= link_to '編集', edit_blog_path(blog.id) %></li>
+                <li><%= link_to '削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除してよろしですか？'} %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <%# 投稿本文 %>
+          <%# テキスト %>
+          <div class = "content_text">
+            <%= blog.content %>
+          </div>
 
-  <tr>
-    <td><%= blog.user.name %></td>
-    <td><%= blog.content %></td>
-    <% if blog.image.url%>
-      <td><%= image_tag blog.image.url %></td>
-    <% end %>
-    <td><%= link_to '詳細', blog_path(blog.id) %></td>
-    <td><%= link_to '編集', edit_blog_path(blog.id) %></td>
-    <td><%= link_to '削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除してよろしですか？'} %></td>
-  </tr>
-<% end %>
-</table>
-
-<%= link_to '新しくブログを投稿する', new_blog_path %>
+          <%# 画像 %>
+          <% if blog.image.url%>
+            <div class = "content_image">
+              <%= image_tag blog.image.url %>
+            </div>
+          <% end %>
+      
+    </div>
+  <% end %>
+</div>

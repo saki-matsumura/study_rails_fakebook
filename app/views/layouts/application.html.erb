@@ -16,24 +16,26 @@
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-    <header>
-      <div class = "app_name text-left">
-        <p>Fakebook</p>
-      </div>
-      <div class = "login text-right">
-      <% if logged_in? %>
-        <%# ログイン中 %>
-        <%= link_to "Plofile", user_path(current_user.id) %>
-        <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-      <%else%>
-        <%# ログアウト中 %>
-        <%= link_to "Sign up", new_user_path %>
-        <%= link_to "Login", new_session_path %>
-      <% end %>
+    <header class = "sticky-top">
+      <div class="container">
+        <div class = "row">
+          <div class = "app_name text-left col-sm mt-3">
+            <h2><%= link_to "Fakebook", blogs_path %></h2>
+          </div>
+          <div class = "login text-right  col-sm mt-3">
+          <% if logged_in? %>
+            <%# ログイン中 %>
+            <%= link_to "Plofile", user_path(current_user.id), class: "btn btn-light" %>
+            <%= link_to "Logout", session_path(current_user.id), method: :delete, class: "btn btn-light"  %>
+          <%else%>
+            <%# ログアウト中 %>
+            <%= link_to "Sign up", new_user_path, class: "btn btn-light" %>
+            <%= link_to "Login", new_session_path, class: "btn btn-light" %>
+          <% end %>
+          </div>
+        </div>
       </div>
     </header>
-
-    <%= yield %>
-
+        <%= yield %>
   </body>
 </html>
