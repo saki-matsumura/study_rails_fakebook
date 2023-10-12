@@ -37,21 +37,23 @@ header{
 
 .post_head{
   width: 100%;
-  display: flex;
-  text-align: right;
+  /* display: flex; */ 
 }
 
-.post_nav{
-  
+.user_name{
+  font-weight: bold;
+  float: left;
 }
 
 #post_menu {
   list-style: none;
+  float: right;
+  /* text-align: right; */
 }
 
 #post_menu ul{
   align-items: center; 
-  text-align: right;
+  /* text-align: right; */
 }
 
 #post_menu li:last-child{
@@ -71,8 +73,9 @@ header{
 /* コンテンツ */
 .content_text {
   width: 100%;
-  text-align: left;
-  margin: 10px 0px;
+  float: left;
+  margin-bottom: 20px;
+  /* margin: 0px; */
 }
 
 .content_image img {
