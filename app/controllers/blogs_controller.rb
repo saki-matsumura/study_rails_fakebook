@@ -1,8 +1,8 @@
 class BlogsController < ApplicationController
-    before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
     
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order(created_at: :desc)
   end
   
   def new
@@ -35,6 +35,7 @@ class BlogsController < ApplicationController
   def confirm
     @blog = current_user.blogs.build(blog_params)
     render :new if @blog.invalid?
+    # binding.pryblog
   end
   
   def edit
@@ -62,4 +63,5 @@ class BlogsController < ApplicationController
   def set_blog
     @blog = Blog.find(params[:id])
   end
-  end
+
+end
