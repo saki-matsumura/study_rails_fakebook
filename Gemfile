@@ -34,8 +34,6 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # 追加：pry
   gem "pry-rails"
-  gem "pry-byebug"
-  gem "pry-doc"
 end
 
 group :development do
