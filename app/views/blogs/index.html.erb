@@ -1,20 +1,13 @@
-
 <div class = "container">
-  <% if notice %>
-  <div class = "notice">
-    <p><%= notice %></p>
-  </div>
-  <% end %>
-
   <div class = "new_post">
     <%= link_to '新規投稿', new_blog_path, class: "btn btn-info" %>
   </div>
 
     <% @blogs.each do |blog| %>
     <div class = "contents_field">
-        <%# 投稿の箱 %>
+        <%# 投稿 %>
   
-        <%# ユーザー名とメニューの箱 %>
+        <%# ユーザー名とメニュー %>
         <div class = "post_head">
           <div class = "user_name">
             <%= blog.user.name %>
@@ -30,15 +23,19 @@
           </div>
         </div>
         <%# 投稿本文 %>
-          <%# テキスト %>
-          <div class = "content_text">
-            <%= blog.content %>
-          </div>
-
+          
           <%# 画像 %>
           <% if blog.image.url%>
+            <div class = "content_text">
+              <%= blog.content %>
+            </div>
             <div class = "content_image">
               <%= image_tag blog.image.url %>
+            </div>
+          <% else %>
+            <%# テキストのみ %>
+            <div class = "content_text_only">
+              <%= blog.content %>
             </div>
           <% end %>
       
