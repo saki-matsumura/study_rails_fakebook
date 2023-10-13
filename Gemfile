@@ -14,6 +14,11 @@ gem "dotenv-rails"
 # 画像アップ用のジェム
 gem "carrierwave"
 gem "mini_magick"
+
+# Heloku用のジェム
+gem "net-smtp"
+gem "net-imap"
+gem "net-pop"
 #  - - - - - - - - - - - - - - - - - - - - - - -
 
 gem "rails", "~> 6.1.6"
