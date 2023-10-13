@@ -2,12 +2,13 @@
    <div class = "heading">
     <h3>以下の内容で、送信する</h3>
   </div>
+
   <%= form_with(model: @blog, local: true) do |form| %>
-    <%= form.hidden_field :content %>
+    <%= form.hidden_field :content %>    
     <%= form.hidden_field :image %>
 
     <p>内容：<%= @blog.content %></p>
-    <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>
+    <%= image_tag(@blog.image.url, class: "content_image container") if @blog.image && @blog.image.url %>
     <%= form.hidden_field :image_cache %>
     <%= form.submit "登録する" %>
 
