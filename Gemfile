@@ -4,6 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.1"
 
 #  - - - - - - - - - - - - - - - - - - - - - - -
+
+# issue機能お試しテスト
+
+#  - - - - - - - - - - - - - - - - - - - - - - -
 # 追加
 # パスワード生成用のジェム
 gem "bcrypt"
